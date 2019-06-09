@@ -6,7 +6,7 @@ def load_library(filePath)
   temp = YAML.load_file(filePath)
   library = {"get_emoticon" => {}, "get_meaning" => {}}
   temp.each do |k, v| 
-    p v
+    library["get_emoticon"][v[i]] = k
    # library["get_emoticon"] += v
     #library["get_meaning"] += k
   end
