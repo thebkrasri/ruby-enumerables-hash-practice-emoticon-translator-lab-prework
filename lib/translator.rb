@@ -7,7 +7,7 @@ def load_library(filePath)
   library = {"get_emoticon" => {}, "get_meaning" => {}}
   temp.each do |k, v| 
     library["get_meaning"][v[1]] = k
-    library["get_emoticon"][v[0]] = k
+    library["get_emoticon"][v[0]] = v[1]
   end
   return library
 end
