@@ -1,8 +1,8 @@
 # require modules here
+require "yaml"
 
 def load_library(filePath)
   # code goes here
-  require "yaml"
   library = YAML.load_file(filePath)
   reutrn libray
 end
