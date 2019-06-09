@@ -3,8 +3,8 @@ require "yaml"
 
 def load_library(filePath)
   # code goes here
-  library = YAML.load_file(filePath)
-  p library.keys
+  temp = YAML.load_file(filePath)
+  library = { "get_emoticon" => temp.keys, "get_meaning" => temp.values }
   return library
 end
 
