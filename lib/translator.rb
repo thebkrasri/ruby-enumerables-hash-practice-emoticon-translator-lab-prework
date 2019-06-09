@@ -4,7 +4,11 @@ require "yaml"
 def load_library(filePath)
   # code goes here
   temp = YAML.load_file(filePath)
-  library = { "get_emoticon" => {temp.keys}, "get_meaning" => {temp.values} }
+  library = {"get_emoticon" => {}, "get_meaning" => {}}
+  temp.each do |k, v| 
+    library["get_emoticon"] += v
+    library["get_meaning"] += k
+  end
   return library
 end
 
