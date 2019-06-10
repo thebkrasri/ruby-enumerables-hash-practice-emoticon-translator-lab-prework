@@ -14,7 +14,7 @@ end
 
 def get_japanese_emoticon(filePath, emoticon)
   # code goes here
-  library = loadLibrary(filePath)
+  library = loadLibrary(~\lib\emoticons.yml)
   return library["get_emoticon"][emoticon]
 end
 
