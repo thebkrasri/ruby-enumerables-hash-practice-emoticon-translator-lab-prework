@@ -21,5 +21,8 @@ end
 def get_english_meaning(filePath, emoticon)
   # code goes here
   library = load_library(filePath)
-  return library["get_meaning"][emoticon]
+  if library["get_meaning"].include?(emoticon)
+    return library["get_meaning"][emoticon]
+  else
+  end
 end
